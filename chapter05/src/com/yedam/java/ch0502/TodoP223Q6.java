@@ -25,29 +25,28 @@ public class TodoP223Q6 {
 				
 			} else if(selectNo == 2) {
 				for(int i = 0; i < scores.length; i++) {
-					System.out.println("scores[" + i + "]" + "> ");
+					System.out.println("scores[" + i + "]> ");
 					scores[i] = Integer.parseInt(scanner.nextLine());
 				}
 				
 			} else if(selectNo == 3) {
 				for(int i = 0; i < scores.length; i++) {
-					System.out.println("scores[" + i + "]" + "> " + scores[i]);
+					System.out.println("scores[" + i + "]> " + scores[i]);
 				}
 				
 			} else if(selectNo == 4) {
 				int max = scores[0];
-				double avg = 0.0;
+				double sum = 0.0;
 				
 				for(int i = 0; i < scores.length; i++) {
 					int current = scores[i];
-					avg += scores[i];
+					sum += scores[i];
 					
 					if(current > max) {
 						max = current;
 					}
 				}
-				avg = avg / (scores.length);
-				System.out.println(scores.length);
+				double avg = sum / (scores.length);
 				System.out.println("최고 점수: " + max);
 				System.out.println("평균 점수: " + avg);
 				
@@ -56,5 +55,6 @@ public class TodoP223Q6 {
 			}
 		}
 		System.out.println("프로그램 종료");
+		scanner.close();
 	}
 }
