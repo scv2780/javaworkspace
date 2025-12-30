@@ -1,0 +1,23 @@
+package com.yedam.java.ch0801;
+
+public class SmartTvExample {
+
+	public static void main(String[] args) {
+		SmartTV smartTV = new SmartTV();
+		smartTV.turnOn();
+		smartTV.setVolume(10);
+		smartTV.search("네이버");
+		smartTV.turnOff();
+		System.out.println("----------------------");
+		// SmartTV = RemoteControl + Searchable + 알파
+		RemoteControl rc = smartTV; // Searchable + 알파는 접근불가
+		rc.turnOn();
+		rc.setVolume(5);;
+		rc.turnOff();
+		
+		Searchable search = smartTV;
+		search.search("교보문고");
+
+	}
+
+}
