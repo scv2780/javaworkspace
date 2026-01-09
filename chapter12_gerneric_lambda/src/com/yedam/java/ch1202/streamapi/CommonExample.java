@@ -11,8 +11,9 @@ public class CommonExample {
 		// Stream API : 컬렉션, 배열 등읠 데이터 소스로부터 데이터를 받아와서
 		//              원하는 형태로 가공하거나 필터링할 수 있는 기능을 제공
 		List<Integer> evenNumbers = numbers.stream() // 1) stream을 연다
-									.filter(n -> n%2 == 0) // 2) 중간연산
-									.collect(Collectors.toList());
+									.filter(n -> n%2 == 0) // 2) 중간연산, 여러개를 순차적으로 진행가능
+									.collect(Collectors.toList()); // 3) 최종연산, 반환하는 형태를 결정
+		// 람다식 중 메소드 참조
 		evenNumbers.stream().forEach(System.out::println);
 
 	}
